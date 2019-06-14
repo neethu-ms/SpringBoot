@@ -8,9 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-
-
 @Entity
 @Table(name = "INTEREST_DETAILS")
 
@@ -22,23 +19,16 @@ public class Interest {
 	private Integer id;
 	
 	@Column(name="principal")
-	Float principal;
+	private Double principal;
 	@Column(name="rate")
-	Float rate;
+	private Double rate;
 	@Column(name="years")
-	Float years;
+	private Double years;
 	@Column(name="interestamt")
-	Float interestAmt;
-	public Interest(Integer id, Float principal, Float rate, Float years, Float interestAmt) {
-		super();
-		this.id = id;
-		this.principal = principal;
-		this.rate = rate;
-		this.years = years;
-		this.interestAmt = interestAmt;
-	}
+	private Double interestAmt;
 	
-	public Interest( Float principal, Float rate, Float years, Float interestAmt) {
+	
+	public Interest( Double principal, Double rate, Double years, Double interestAmt) {
 	
 		this.principal = principal;
 		this.rate = rate;
@@ -54,28 +44,28 @@ public class Interest {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Float getPrincipal() {
+	public Double getPrincipal() {
 		return principal;
 	}
-	public void setPrincipal(Float principal) {
+	public void setPrincipal(Double principal) {
 		this.principal = principal;
 	}
-	public Float getRate() {
+	public Double getRate() {
 		return rate;
 	}
-	public void setRate(Float rate) {
+	public void setRate(Double rate) {
 		this.rate = rate;
 	}
-	public Float getYears() {
+	public Double getYears() {
 		return years;
 	}
-	public void setYears(Float years) {
+	public void setYears(Double years) {
 		this.years = years;
 	}
-	public Float getInterestAmt() {
+	public Double getInterestAmt() {
 		return interestAmt;
 	}
-	public void setInterestAmt(Float interestAmt) {
+	public void setInterestAmt(Double interestAmt) {
 		this.interestAmt = interestAmt;
 	}
 
