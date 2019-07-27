@@ -1,0 +1,48 @@
+
+
+h1{
+	text-align:center;
+}
+
+body{
+	background-color:#D3D3D3;
+	font-weight:bold;
+}
+
+.inner{
+	background-color:#99ddff;
+	margin:auto;
+	border:1px solid black;
+	width:350px;
+	height:25px;
+	text-align:center;
+	border-left:2px solid black;
+	border-right:2px solid black;
+    
+}
+
+button{
+	border:1px solid black;
+	font-weight:bold;
+	background-color:#99ddff;
+	
+	
+}
+
+.button-wrapper{
+	text-align:center;
+}
+
+input{
+	
+	font-weight:bold;
+	color:red;
+	border:3px solid #D3D3D3;
+	
+}
+
+input[type="text"]{
+
+  background-color : WHITE; 
+
+}

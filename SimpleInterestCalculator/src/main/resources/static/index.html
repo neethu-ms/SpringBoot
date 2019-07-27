@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Simple Interest Calculator</title>
+<link rel="stylesheet" type="text/css" href="indexStyle.css">
 </head>
 <body>
-<form>
-Principal <input id="principal" name="principal" type="text">
-Interest Rate <input id="rate" name="rate" type="text">
-Number of Years <input id="years" name="years" type="text">
-<button type=submit formaction="/interest/calculate" value="calculate" formmethod="post">calculate</button>
+<h1>Simple Interest Calculator</h1>
+
+<form id="form">
+<div class="inner" style="border-top: 2px solid black;"><span>Principal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input id="principal" name="principal" type="text"></span></div>
+<div class="inner"><span>Interest Rate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input id="rate" name="rate" type="text"></span></div>
+<div class="inner" style="border-bottom: 2px solid black;"><span>Number of Years <input id="years" name="years" type="text"></span></div>
+<br><br>
+<div class="button-wrapper">
+<button type=submit formaction="/interest/calculate" value="calculate" formmethod="post">calculate</button></div>
 </form>
+
 </body>
 </html>
