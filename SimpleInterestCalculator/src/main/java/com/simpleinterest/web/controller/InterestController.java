@@ -23,7 +23,7 @@ InterestService interestService;
 	
 	
 	
-	@PostMapping("/calculate")
+	@PostMapping("/simpleInterest")
 	public ResponseEntity<String> setInterestAmount(Interest interest){
 	
 		if(!checkPositive(interest.getPrincipal()) || !checkPositive(interest.getRate()) || !checkPositive(interest.getYears()))
@@ -40,7 +40,7 @@ InterestService interestService;
 		return false;
 	}
 	
-	@GetMapping("/calculate")
+	@GetMapping("/simpleInterest")
 	public ResponseEntity<String> getInterestAmount(@RequestParam("principal") Double principal, @RequestParam("rate") Double rate, @RequestParam("years") Double years ){
 		if(!checkPositive(principal) || !checkPositive(rate) || !checkPositive(years))
 		    return new ResponseEntity<String>("Invalid parameters",HttpStatus.BAD_REQUEST);
