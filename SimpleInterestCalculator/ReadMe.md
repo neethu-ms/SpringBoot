@@ -17,8 +17,10 @@ Needs to give username and password to access the web application
 
 
 ## Tech stack
+
    Java, html, css, Spring Data JPA, Restful API, Postgresql database
 
 
 ## React Client 
+
     !["Link to React App"](https://github.com/neethu-ms/interest-calculator-frontend/)
