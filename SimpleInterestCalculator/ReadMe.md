@@ -23,4 +23,4 @@ Needs to give username and password to access the web application
 
 ## React Client 
 
-    !["Link to React App"](https://github.com/neethu-ms/interest-calculator-frontend/)
+(https://github.com/neethu-ms/interest-calculator-frontend/)
