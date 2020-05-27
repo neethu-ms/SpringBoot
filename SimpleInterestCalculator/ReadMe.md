@@ -9,4 +9,16 @@ http://localhost:8090/swagger-ui.html
 
 Needs to give username and password to access the web application 
 
+## Getting started
 
+1. Fork the repo. 
+2. Deploy the Spring boot application
+3. Acess http://localhost:8090
+
+
+## Tech stack
+   Java, html, css, Spring Data JPA, Restful API, Postgresql database
+
+
+## React Client 
+    https://github.com/neethu-ms/interest-calculator-frontend
