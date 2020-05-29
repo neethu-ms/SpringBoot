@@ -24,7 +24,7 @@ public class InterestController {
 InterestService interestService;
 	
 	
-    @CrossOrigin(origins = { "http://localhost:3000"})
+   @CrossOrigin(origins = { "http://localhost:3000"})
 	@PostMapping("/simpleInterest")
 	public ResponseEntity<String> setInterestAmount(@RequestBody Interest interest){
 	  	if(!checkPositive(interest.getPrincipal()) || !checkPositive(interest.getRate()) || !checkPositive(interest.getYears()))
@@ -41,7 +41,7 @@ InterestService interestService;
 		return false;
 	}
 	
-	@CrossOrigin(origins = { "http://localhost:3000"})
+	@CrossOrigin(origins = {"http://localhost:3000"})
 	@GetMapping("/simpleInterest")
 	public ResponseEntity<String> getInterestAmount(@RequestParam("principal") Double principal, @RequestParam("rate") Double rate, @RequestParam("years") Double years ){
 		if(!checkPositive(principal) || !checkPositive(rate) || !checkPositive(years))
