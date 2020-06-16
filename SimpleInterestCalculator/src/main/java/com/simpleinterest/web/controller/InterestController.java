@@ -4,8 +4,10 @@ package com.simpleinterest.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,11 +24,10 @@ public class InterestController {
 InterestService interestService;
 	
 	
-	
+   @CrossOrigin(origins = { "http://localhost:3000"})
 	@PostMapping("/simpleInterest")
-	public ResponseEntity<String> setInterestAmount(Interest interest){
-	
-		if(!checkPositive(interest.getPrincipal()) || !checkPositive(interest.getRate()) || !checkPositive(interest.getYears()))
+	public ResponseEntity<String> setInterestAmount(@RequestBody Interest interest){
+	  	if(!checkPositive(interest.getPrincipal()) || !checkPositive(interest.getRate()) || !checkPositive(interest.getYears()))
 	    return new ResponseEntity<String>("Invalid parameters",HttpStatus.BAD_REQUEST);
 		Double interestAmt= interestService.calculateInterest(interest);
         interest.setInterestAmt(interestAmt);
@@ -40,6 +41,7 @@ InterestService interestService;
 		return false;
 	}
 	
+	@CrossOrigin(origins = {"http://localhost:3000"})
 	@GetMapping("/simpleInterest")
 	public ResponseEntity<String> getInterestAmount(@RequestParam("principal") Double principal, @RequestParam("rate") Double rate, @RequestParam("years") Double years ){
 		if(!checkPositive(principal) || !checkPositive(rate) || !checkPositive(years))

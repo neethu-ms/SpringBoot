@@ -7,15 +7,20 @@
 </head>
 <body>
 <h1>Simple Interest Calculator</h1>
-
+<br/>
+<br/>
 <form id="form">
 <div class="inner" style="border-top: 2px solid black;"><span>Principal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input id="principal" name="principal" type="text"></span></div>
 <div class="inner"><span>Interest Rate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <input id="rate" name="rate" type="text"></span></div>
 <div class="inner" style="border-bottom: 2px solid black;"><span>Number of Years <input id="years" name="years" type="text"></span></div>
 <br><br>
 <div class="button-wrapper">
-<button type=submit formaction="/interest/simpleInterest" value="calculate" formmethod="post">calculate</button></div>
+<button id="calculate">calculate</button></div>
+<br/>
+<br/>
+<div> <h2 id="interest"></h2></div>
 </form>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="index.js"></script>
 </body>
 </html>
