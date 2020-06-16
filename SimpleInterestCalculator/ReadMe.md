@@ -13,12 +13,11 @@ Needs to give username and password to access the web application
 
 1. Fork the repo. 
 2. Deploy the Spring boot application
-3. Acess http://localhost:8090
-
-
+3. Access simple client using http://localhost:8090
+ 
 ## Tech stack
 
-   Java, html, css, Spring Data JPA, Restful API, Postgresql database
+   Spring Data JPA, Restful API, Postgresql database, jQuery, html, css
 
 
 ## React Client 
